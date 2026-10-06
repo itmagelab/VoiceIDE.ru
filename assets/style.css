@@ -888,11 +888,6 @@ a:hover { color: var(--yellow-dim, #b57614); }
 
 .made-mark { color: var(--orange); flex: 0 0 auto; }
 
-.made-hint {
-  color: var(--fg3);
-  font-size: .76rem;
-}
-
 /* ---------- language blocks & reveal ---------- */
 
 html[lang="ru"] [data-lang-block="en"] { display: none; }
