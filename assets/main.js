@@ -123,10 +123,6 @@ const I18N = {
     'footer.col1': 'Разделы',
     'footer.col2': 'Проект',
     'footer.repo': 'Репозиторий',
-    'footer.logic': 'Продукт и логика',
-    'footer.stack': 'Технологии',
-    'footer.dev': 'Разработка и запуск',
-    'footer.privacy': 'Приватность',
     'footer.made': 'Сделано с телефона.'
   },
 
@@ -262,10 +258,6 @@ const I18N = {
     'footer.col1': 'Sections',
     'footer.col2': 'Project',
     'footer.repo': 'Repository',
-    'footer.logic': 'Product behavior',
-    'footer.stack': 'Technology stack',
-    'footer.dev': 'Development and deployment',
-    'footer.privacy': 'Privacy policy',
     'footer.made': 'Built from a phone.'
   }
 };
