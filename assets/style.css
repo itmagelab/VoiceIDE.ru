@@ -347,8 +347,6 @@ a:hover { color: var(--yellow-dim, #b57614); }
 .chip-orange { color: var(--orange); border-color: #e5b189; background: #fbe6cd; }
 .chip-aqua { color: #3f7341; border-color: #a6c9a7; background: #dcebd8; }
 .chip-blue { color: #346a6d; border-color: #9cc3c5; background: #d6e7e8; }
-.chip-purple { color: #8d4a6b; border-color: #d5adc1; background: #f2dde6; }
-.chip-yellow { color: #8a6412; border-color: #e0c37f; background: #f6e7bf; }
 .chip-green { color: #63671a; border-color: #c3c772; background: #e6e7bd; }
 
 /* ---------- phones ---------- */
@@ -405,7 +403,6 @@ a:hover { color: var(--yellow-dim, #b57614); }
 .how-grid > *,
 .cards > *,
 .gallery > *,
-.stack-grid > *,
 .install-grid > *,
 .footer-grid > *,
 .panel > * {
@@ -626,40 +623,6 @@ a:hover { color: var(--yellow-dim, #b57614); }
   font-size: .88rem;
   color: var(--fg2);
   text-align: center;
-}
-
-/* ---------- stack ---------- */
-
-.stack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-}
-
-.stack-col {
-  padding: 24px;
-  background: var(--bg-hard);
-  border: var(--border);
-  border-radius: var(--radius);
-}
-
-.stack-head {
-  font-family: var(--font-mono);
-  font-size: .9rem;
-  font-weight: 700;
-  letter-spacing: .02em;
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed var(--bg2);
-}
-
-.chips {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
 }
 
 /* ---------- install ---------- */
