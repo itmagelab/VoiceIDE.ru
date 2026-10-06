@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoiceIDE — разработка с телефона голосом</title>
+<meta name="description" content="VoiceIDE — Android-клиент и агентный backend: опишите задачу голосом, получите план, проверьте diff по файлам и опубликуйте pull request.">
+<meta name="theme-color" content="#fbf1c7">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VoiceIDE — разработка с телефона голосом">
+<meta property="og:description" content="Опишите задачу голосом, проверьте изменения по файлам и опубликуйте pull request — не вставая за компьютер.">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/icon-512.png" type="image/png">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">К основному содержимому</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <img class="brand-mark" src="assets/img/icon-512.png" width="40" height="40" alt="VoiceIDE">
+      <span class="brand-text">
+        <span class="brand-name">VoiceIDE</span>
+        <span class="brand-tag" data-i18n="brand.tag">Агентный цикл разработки с телефона</span>
+      </span>
+    </a>
+
+    <nav class="nav" data-i18n-attr="aria-label:a11y.sections" aria-label="Разделы">
+      <a href="#how" data-i18n="nav.how">Как это работает</a>
+      <a href="#features" data-i18n="nav.features">Возможности</a>
+      <a href="#screens" data-i18n="nav.screens">Скриншоты</a>
+      <a href="#stack" data-i18n="nav.stack">Стек</a>
+      <a href="#install" data-i18n="nav.install">Запуск</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.lang" aria-label="Язык">
+        <button type="button" class="lang-btn" data-lang-set="ru" aria-pressed="true">RU</button>
+        <button type="button" class="lang-btn" data-lang-set="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-primary btn-sm" href="#install" data-i18n="cta.get">Как подключить</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span><span data-i18n="hero.badge">Задача → план → правки → pull request</span></p>
+        <h1>
+          <span data-i18n="hero.title.a">Опишите задачу</span>
+          <span class="accent" data-i18n="hero.title.b">голосом — с телефона.</span>
+        </h1>
+        <p class="lead" data-i18n="hero.lead">VoiceIDE отдаёт агенту задачу, следит за его работой и показывает результат по файлам. Всё, что попадёт в репозиторий, вы подтверждаете сами.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#install" data-i18n="hero.cta.primary">Получить доступ</a>
+          <a class="btn btn-ghost" href="#screens" data-i18n="hero.cta.secondary">Смотреть скриншоты</a>
+        </div>
+        <ul class="hero-facts">
+          <li><span class="chip chip-orange">Android 8.0+</span></li>
+          <li><span class="chip chip-aqua" data-i18n="hero.fact1">диктовка офлайн</span></li>
+          <li><span class="chip chip-blue" data-i18n="hero.fact2">агент на своём сервере</span></li>
+          <li><span class="chip chip-green" data-i18n="hero.fact3">PR только с подтверждением</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone phone-main">
+          <div class="phone-screen">
+            <img src="assets/img/01-projects-tasks.png" width="880" height="1920" data-i18n-alt="alt.projects" alt="Список проектов и задач VoiceIDE">
+          </div>
+        </div>
+        <div class="phone phone-back phone-back-left">
+          <div class="phone-screen">
+            <img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.plan" alt="План реализации до сборки">
+          </div>
+        </div>
+        <div class="phone phone-back phone-back-right">
+          <div class="phone-screen">
+            <img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.review" alt="Ревью изменений по файлам">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="how.kicker">Сценарий</p>
+        <h2 data-i18n="how.title">Пять шагов от фразы до pull request</h2>
+        <p class="section-lead" data-i18n="how.lead">Ничего не публикуется само: агент работает в отдельной рабочей копии, а решение по каждому файлу принимаете вы.</p>
+      </header>
+
+      <div class="how-grid">
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step-num">01</span>
+            <div>
+              <h3 data-i18n="how.s1.title">Подключите GitHub</h3>
+              <p data-i18n="how.s1.text">OAuth Device Flow, затем выбор публичного или приватного репозитория размером до 500 МБ.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step-num">02</span>
+            <div>
+              <h3 data-i18n="how.s2.title">Опишите задачу</h3>
+              <p data-i18n="how.s2.text">Голосом на русском или английском либо текстом. Выберите модель агента и режим хода: план или сборка.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step-num">03</span>
+            <div>
+              <h3 data-i18n="how.s3.title">Следите за работой</h3>
+              <p data-i18n="how.s3.text">Очередь, рабочая копия и отдельное рабочее пространство на задачу. В журнале видно инструменты, команды и пути.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step-num">04</span>
+            <div>
+              <h3 data-i18n="how.s4.title">Проверьте изменения</h3>
+              <p data-i18n="how.s4.text">Diff по файлам: принять файл, попросить агента о правке или оставить заметку. Правки идут в ту же сессию.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step-num">05</span>
+            <div>
+              <h3 data-i18n="how.s5.title">Опубликуйте PR</h3>
+              <p data-i18n="how.s5.text">Заголовок, описание и явное подтверждение. Worker создаёт ветку и pull request; слияние — только ваше.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="terminal-wrap" data-reveal>
+          <div class="terminal" role="img" data-i18n-attr="aria-label:a11y.terminal" aria-label="Пример сессии в терминале">
+            <div class="terminal-bar">
+              <span class="tl-dot tl-red"></span>
+              <span class="tl-dot tl-yellow"></span>
+              <span class="tl-dot tl-green"></span>
+              <span class="terminal-title">voiceide · itmagelab/VoiceIDE</span>
+            </div>
+            <pre class="terminal-body" data-lang-block="ru"><span class="c-prompt">$</span> voiceide task new --dictate
+<span class="c-ok">✓</span> распознано: «добавь экран настроек сервера»
+
+<span class="c-prompt">$</span> voiceide task run --mode plan
+<span class="c-ok">✓</span> план готов · <span class="c-num">3</span> файла · <span class="c-num">2</span> проверки
+
+<span class="c-prompt">$</span> voiceide task run --mode build
+<span class="c-ok">✓</span> сборка завершена · <span class="c-add">+128</span> <span class="c-del">−14</span>
+
+<span class="c-prompt">$</span> voiceide review --accept-all
+<span class="c-ok">✓</span> все файлы приняты
+
+<span class="c-prompt">$</span> voiceide pr create
+<span class="c-ok">✓</span> pull request <span class="c-num">#42</span> → master</pre>
+            <pre class="terminal-body" data-lang-block="en"><span class="c-prompt">$</span> voiceide task new --dictate
+<span class="c-ok">✓</span> heard: "add a server settings screen"
+
+<span class="c-prompt">$</span> voiceide task run --mode plan
+<span class="c-ok">✓</span> plan ready · <span class="c-num">3</span> files · <span class="c-num">2</span> checks
+
+<span class="c-prompt">$</span> voiceide task run --mode build
+<span class="c-ok">✓</span> build finished · <span class="c-add">+128</span> <span class="c-del">−14</span>
+
+<span class="c-prompt">$</span> voiceide review --accept-all
+<span class="c-ok">✓</span> all files accepted
+
+<span class="c-prompt">$</span> voiceide pr create
+<span class="c-ok">✓</span> pull request <span class="c-num">#42</span> → master</pre>
+          </div>
+          <p class="terminal-note" data-i18n="how.note">Так выглядит цикл задачи: план и сборка — два разных агента с разными инструментами.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="features">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="features.kicker">Возможности</p>
+        <h2 data-i18n="features.title">Всё, что нужно, чтобы не садиться за компьютер</h2>
+        <p class="section-lead" data-i18n="features.lead">Приложение управляет агентом и показывает его работу. Код, коммиты и pull request остаются в вашем репозитории и под вашим аккаунтом.</p>
+      </header>
+
+      <div class="cards">
+        <article class="card" data-reveal>
+          <span class="card-icon card-orange" aria-hidden="true">●</span>
+          <h3 data-i18n="features.1.title">Диктовка задач</h3>
+          <p data-i18n="features.1.text">Надиктуйте новую задачу, уточнение, комментарий к PR или заметку к файлу. Текст распознавания редактируется перед отправкой.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-icon card-aqua" aria-hidden="true">●</span>
+          <h3 data-i18n="features.2.title">Речь без сети</h3>
+          <p data-i18n="features.2.text">Системный сервис устройства либо локальные модели Whisper Tiny и Parakeet v3. Аудио не сохраняется и не уходит в сеть.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-icon card-blue" aria-hidden="true">●</span>
+          <h3 data-i18n="features.3.title">Режим плана</h3>
+          <p data-i18n="features.3.text">План-агент изучает репозиторий без инструментов записи. Обсудите план голосом, а сборку запустите одним тапом.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-icon card-purple" aria-hidden="true">●</span>
+          <h3 data-i18n="features.4.title">Модель на задачу</h3>
+          <p data-i18n="features.4.text">Каталог провайдеров и моделей приходит с сервера. Выбор сохраняется в задаче и действует на все её ходы.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-icon card-yellow" aria-hidden="true">●</span>
+          <h3 data-i18n="features.5.title">Журнал выполнения</h3>
+          <p data-i18n="features.5.text">Таймлайн действий агента, использованные инструменты, команды и затронутые пути. Секреты маскируются.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-icon card-green" aria-hidden="true">●</span>
+          <h3 data-i18n="features.6.title">Ревью по файлам</h3>
+          <p data-i18n="features.6.text">Принять файл, попросить правки, оставить заметку. «Принять все» можно отменить, а решения — изменить.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-icon card-orange" aria-hidden="true">●</span>
+          <h3 data-i18n="features.7.title">Работа в одной сессии</h3>
+          <p data-i18n="features.7.text">Замечания возвращаются агенту в тот же воркспейс: контекст обсуждения плана и правок сохраняется между ходами.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-icon card-blue" aria-hidden="true">●</span>
+          <h3 data-i18n="features.8.title">PR без сюрпризов</h3>
+          <p data-i18n="features.8.text">Публикация только после вашего подтверждения, в отдельную ветку. Автоматического слияния нет.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="screens">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="screens.kicker">Интерфейс</p>
+        <h2 data-i18n="screens.title">Как это выглядит на телефоне</h2>
+        <p class="section-lead" data-i18n="screens.lead">Реальные экраны текущей версии приложения.</p>
+      </header>
+
+      <div class="gallery">
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/07-dictation.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.dictation" alt="Диктовка новой задачи"></div>
+          <figcaption data-i18n="screens.1.text">Диктовка задачи с выбором языка и движка распознавания.</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.plan" alt="План реализации"></div>
+          <figcaption data-i18n="screens.2.text">План целиком: подход, файлы, проверки — до первого изменения кода.</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/02-task-running.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.running" alt="Задача выполняется"></div>
+          <figcaption data-i18n="screens.3.text">Статус задачи и свежие события журнала во время работы агента.</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.review" alt="Ревью изменений"></div>
+          <figcaption data-i18n="screens.4.text">Diff крупно, решение по каждому файлу: принять, правки или заметка.</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/08-dialog-voice.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.dialog" alt="Диалог с агентом"></div>
+          <figcaption data-i18n="screens.5.text">Запрос правки голосом — агент продолжает в том же воркспейсе.</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/05-task-pr.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.pr" alt="Созданный pull request"></div>
+          <figcaption data-i18n="screens.6.text">Проверка заголовка и описания PR перед подтверждением публикации.</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/10-offline-speech-models.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.models" alt="Настройки голосового ввода"></div>
+          <figcaption data-i18n="screens.7.text">Локальные модели речи: скачать, выбрать или удалить.</figcaption>
+        </figure>
+        <figure class="shot" data-reveal>
+          <div class="shot-frame"><img src="assets/img/01-projects-tasks.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.projects" alt="Проекты и задачи"></div>
+          <figcaption data-i18n="screens.8.text">Проекты, задачи и их состояние — весь контекст работы с телефона.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="stack">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="stack.kicker">Технологии</p>
+        <h2 data-i18n="stack.title">Телефон, Rust и контейнеры</h2>
+        <p class="section-lead" data-i18n="stack.lead">Агент запускается на вашем сервере в отдельном окружении: у него есть инструменты разработки и список запрещённых команд.</p>
+      </header>
+
+      <div class="stack-grid">
+        <div class="stack-col" data-reveal>
+          <h3 class="stack-head" data-i18n="stack.client">Клиент Android</h3>
+          <ul class="chips">
+            <li class="chip chip-orange">Kotlin</li>
+            <li class="chip chip-orange">Jetpack Compose</li>
+            <li class="chip chip-orange">Material 3</li>
+            <li class="chip chip-orange">Ktor</li>
+            <li class="chip chip-aqua">sherpa-onnx</li>
+            <li class="chip chip-aqua">Whisper Tiny</li>
+            <li class="chip chip-aqua">Parakeet v3</li>
+          </ul>
+        </div>
+        <div class="stack-col" data-reveal>
+          <h3 class="stack-head" data-i18n="stack.backend">Backend и агент</h3>
+          <ul class="chips">
+            <li class="chip chip-blue">Rust</li>
+            <li class="chip chip-blue">Loco</li>
+            <li class="chip chip-blue">PostgreSQL</li>
+            <li class="chip chip-blue">CodeWhale Runtime</li>
+            <li class="chip chip-purple">GitHub OAuth</li>
+            <li class="chip chip-purple">gh CLI</li>
+          </ul>
+        </div>
+        <div class="stack-col" data-reveal>
+          <h3 class="stack-head" data-i18n="stack.infra">Развёртывание</h3>
+          <ul class="chips">
+            <li class="chip chip-green">Podman Compose</li>
+            <li class="chip chip-green">Caddy</li>
+            <li class="chip chip-green" data-i18n="stack.https">HTTPS из коробки</li>
+            <li class="chip chip-yellow" data-i18n="stack.profiles">Профили rust / android / full</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="install">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="install.kicker">Запуск</p>
+        <h2 data-i18n="install.title">Демо-сервер или свой</h2>
+        <p class="section-lead" data-i18n="install.lead">При первом старте приложение предлагает два пути: общий демо-инстанс или сервер, который вы подняли сами.</p>
+      </header>
+
+      <div class="install-grid">
+        <article class="panel" data-reveal>
+          <h3 class="panel-title" data-i18n="install.a.title">Публичный демо-сервер</h3>
+          <p data-i18n="install.a.text">Готовый общий инстанс, чтобы попробовать сценарий сразу. Подходит, чтобы оценить приложение без своей инфраструктуры.</p>
+          <a class="btn btn-primary" href="#cta" data-i18n="install.a.cta">Написать автору</a>
+        </article>
+
+        <article class="panel panel-dark" data-reveal>
+          <h3 class="panel-title" data-i18n="install.b.title">Свой сервер</h3>
+          <p data-i18n="install.b.text">Весь стек в одном Compose-файле: API, worker, Runtime агента и PostgreSQL. Нужен домен с DNS на ваш сервер и открытые порты 80/443.</p>
+          <div class="code" data-copy="code-deploy">
+            <button type="button" class="copy-btn" data-i18n="a11y.copy">Копировать</button>
+<pre>git clone git@github.com:itmagelab/VoiceIDE.git
+cd VoiceIDE
+cp .env.example .env      <span data-i18n="install.code.comment"># ключи и пароли</span>
+podman compose up --detach</pre>
+          </div>
+          <p class="panel-hint" data-i18n="install.b.hint">Локально API доступен на http://127.0.0.1:8080, снаружи — через Caddy с HTTPS.</p>
+        </article>
+      </div>
+
+      <div class="requirements" data-reveal>
+        <h3 data-i18n="install.req.title">Что нужно</h3>
+        <ul class="req-list">
+          <li><strong data-i18n="install.req.android">Android 8.0 (API 26)</strong> <span data-i18n="install.req.1">или новее — современный смартфон с микрофоном.</span></li>
+          <li><strong data-i18n="install.req.abi">arm64-v8a</strong> <span data-i18n="install.req.2">— APK под другие ABI собираются отдельно.</span></li>
+          <li><strong data-i18n="install.req.github">Аккаунт GitHub</strong> <span data-i18n="install.req.3">— чтобы подключить репозиторий.</span></li>
+          <li><strong data-i18n="install.req.llm">Ключ LLM-провайдера</strong> <span data-i18n="install.req.4">— если поднимаете свой сервер.</span></li>
+        </ul>
+      </div>
+
+      <p class="note" data-reveal>
+        <span data-i18n="install.note.a">Сборки лежат в закрытом репозитории: напишите автору, и вы получите ссылку на APK нужной архитектуры.</span>
+        <span class="note-version" data-i18n="install.note.b">Актуальная версия — v0.9.1.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="privacy">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="privacy.kicker">Доверие</p>
+        <h2 data-i18n="privacy.title">Приватность по умолчанию</h2>
+      </header>
+      <div class="cards cards-3">
+        <article class="card" data-reveal>
+          <h3 data-i18n="privacy.1.title">Токены зашифрованы</h3>
+          <p data-i18n="privacy.1.text">OAuth-токены GitHub хранятся в PostgreSQL в виде AES-256-GCM. Отключение GitHub удаляет токен из VoiceIDE.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="privacy.2.title">Аудио не хранится</h3>
+          <p data-i18n="privacy.2.text">Диктовка не сохраняет записи и историю фраз. Локальные модели распознают речь прямо на устройстве.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="privacy.3.title">Ничего не публикуется молча</h3>
+          <p data-i18n="privacy.3.text">Изменения остаются в рабочем пространстве, пока вы явно не подтвердите создание pull request.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="privacy.4.title">Секреты маскируются</h3>
+          <p data-i18n="privacy.4.text">В журнале выполнения значения маскируются; содержимое файлов и внутренние рассуждения модели не сохраняются.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="privacy.5.title">Агент в песочнице</h3>
+          <p data-i18n="privacy.5.text">Runtime ограничен списком команд, а операции GitHub выполняет worker вне контейнера агента.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="privacy.6.title">Ваш аккаунт</h3>
+          <p data-i18n="privacy.6.text">Коммиты, ветки и pull request создаются от имени подключённого GitHub-аккаунта и только вашего репозитория.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box" data-reveal>
+        <h2 data-i18n="cta.title">Опишите задачу — код напишет агент</h2>
+        <p data-i18n="cta.text">Подключите VoiceIDE к своему репозиторию и ведите разработку с телефона: план, правки, ревью и pull request в одном сценарии.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="#install" data-i18n="cta.primary">Как подключить</a>
+          <a class="btn btn-outline btn-lg" href="https://github.com/itmagelab/VoiceIDE" data-i18n="cta.secondary">Репозиторий на GitHub</a>
+        </div>
+        <p class="cta-note" data-i18n="cta.note">Репозиторий закрытый — доступ к сборкам по запросу.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#top">
+        <img class="brand-mark" src="assets/img/icon-512.png" width="36" height="36" alt="VoiceIDE">
+        <span class="brand-text">
+          <span class="brand-name">VoiceIDE</span>
+          <span class="brand-tag" data-i18n="footer.tag">Агентный цикл разработки с телефона</span>
+        </span>
+      </a>
+      <p class="footer-copy" data-i18n="footer.copy">Android-клиент и backend, которые превращают голосовое описание задачи в проверенный pull request.</p>
+    </div>
+    <nav class="footer-col" data-i18n-attr="aria-label:a11y.sections" aria-label="Разделы">
+      <h2 class="footer-head" data-i18n="footer.col1">Разделы</h2>
+      <a href="#how" data-i18n="nav.how">Как это работает</a>
+      <a href="#features" data-i18n="nav.features">Возможности</a>
+      <a href="#screens" data-i18n="nav.screens">Скриншоты</a>
+      <a href="#stack" data-i18n="nav.stack">Стек</a>
+      <a href="#install" data-i18n="nav.install">Запуск</a>
+    </nav>
+    <nav class="footer-col" data-i18n-attr="aria-label:a11y.project" aria-label="Проект">
+      <h2 class="footer-head" data-i18n="footer.col2">Проект</h2>
+      <a href="https://github.com/itmagelab/VoiceIDE" data-i18n="footer.repo">Репозиторий</a>
+      <a href="https://github.com/itmagelab/VoiceIDE/blob/master/doc/product-and-logic.md" data-i18n="footer.logic">Продукт и логика</a>
+      <a href="https://github.com/itmagelab/VoiceIDE/blob/master/doc/tech-stack.md" data-i18n="footer.stack">Технологии</a>
+      <a href="https://github.com/itmagelab/VoiceIDE/blob/master/DEVELOPMENT.md" data-i18n="footer.dev">Разработка и запуск</a>
+      <a href="https://github.com/itmagelab/VoiceIDE/blob/master/docs/PRIVACY.md" data-i18n="footer.privacy">Приватность</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 VoiceIDE · v0.9.1</p>
+    <p data-i18n="footer.made">Сделано с телефона.</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
