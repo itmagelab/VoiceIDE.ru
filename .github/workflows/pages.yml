@@ -4,8 +4,7 @@ on:
   push:
     branches: [master]
     paths:
-      - 'VoiceIDE.ru/**'
-      - '.github/workflows/pages.yml'
+      - '**'
   workflow_dispatch:
 
 permissions:
@@ -31,7 +30,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: VoiceIDE.ru
+          path: .
 
       - id: deployment
         uses: actions/deploy-pages@v4
