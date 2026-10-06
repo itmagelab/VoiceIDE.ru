@@ -11,6 +11,9 @@ const I18N = {
     'a11y.terminal': 'Пример работы в терминале',
     'a11y.copy': 'Копировать',
     'a11y.copied': 'Скопировано',
+    'a11y.toTop': 'Наверх',
+    'gh.ribbon': 'Проект на GitHub',
+    'gh.label': 'VoiceIDE',
     'brand.tag': 'Разработка голосом прямо с телефона',
     'nav.how': 'Как это работает',
     'nav.features': 'Возможности',
@@ -99,6 +102,7 @@ const I18N = {
     'install.req.4': '— если вы запускаете собственный сервер.',
     'install.note.a': 'Приложение находится в стадии закрытого тестирования. Напишите автору, чтобы получить ссылку на скачивание.',
     'install.note.b': 'Актуальная версия — v0.9.1.',
+    'install.note.releases': 'Скачать последнюю версию на GitHub',
     'privacy.kicker': 'Безопасность',
     'privacy.title': 'Конфиденциальность по умолчанию',
     'privacy.1.title': 'Защита данных',
@@ -123,7 +127,8 @@ const I18N = {
     'footer.col1': 'Разделы',
     'footer.col2': 'Проект',
     'footer.repo': 'Репозиторий',
-    'footer.made': 'Сделано с телефона.'
+    'footer.made': 'Сделано с помощью VoiceIDE',
+    'footer.madeHint': 'диктовка задачи → план → правки → pull request'
   },
 
   en: {
@@ -136,6 +141,9 @@ const I18N = {
     'a11y.terminal': 'Example of work in the terminal',
     'a11y.copy': 'Copy',
     'a11y.copied': 'Copied',
+    'a11y.toTop': 'Back to top',
+    'gh.ribbon': 'Project on GitHub',
+    'gh.label': 'VoiceIDE',
 
     'brand.tag': 'Coding by voice, right from your phone',
     'nav.how': 'How it works',
@@ -231,6 +239,7 @@ const I18N = {
     'install.req.4': '— if you run your own server.',
     'install.note.a': 'The app is in closed beta testing. Write to the author to get a download link.',
     'install.note.b': 'Current version — v0.9.1.',
+    'install.note.releases': 'Download the latest version on GitHub',
 
     'privacy.kicker': 'Security',
     'privacy.title': 'Private by default',
@@ -258,7 +267,8 @@ const I18N = {
     'footer.col1': 'Sections',
     'footer.col2': 'Project',
     'footer.repo': 'Repository',
-    'footer.made': 'Built from a phone.'
+    'footer.made': 'Built with VoiceIDE',
+    'footer.madeHint': 'dictate the task → plan → edits → pull request'
   }
 };
 
@@ -353,6 +363,24 @@ if (header) {
   const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+/* --- кнопка «наверх» --- */
+
+const toTop = document.querySelector('[data-to-top]');
+
+if (toTop) {
+  const revealToTop = () => toTop.classList.toggle('is-visible', window.scrollY > 480);
+
+  revealToTop();
+  window.addEventListener('scroll', revealToTop, { passive: true });
+
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* фокус на начало документа, иначе остаётся на невидимой кнопке */
+    const brand = document.querySelector('.site-header .brand');
+    if (brand) brand.focus({ preventScroll: true });
+  });
 }
 
 /* --- копирование команд развёртывания --- */

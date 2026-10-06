@@ -114,6 +114,33 @@ a:hover { color: var(--yellow-dim, #b57614); }
 }
 .skip-link:focus { left: 0; }
 
+/* ---------- github ribbon ---------- */
+
+.gh-ribbon {
+  position: absolute;
+  top: 26px;
+  right: -46px;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 220px;
+  padding: 7px 0;
+  transform: rotate(45deg);
+  background: var(--d-bg0);
+  color: var(--d-fg);
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(40, 40, 40, .22);
+  transition: background-color .12s ease, color .12s ease;
+}
+.gh-ribbon:hover { background: var(--orange); color: #2b2118; }
+.gh-mark { flex: 0 0 auto; }
+
 /* ---------- header ---------- */
 
 .site-header {
@@ -728,6 +755,33 @@ a:hover { color: var(--yellow-dim, #b57614); }
   font-size: .95rem;
 }
 .note-version { display: block; margin-top: 4px; color: var(--fg3); font-family: var(--font-mono); font-size: .84rem; }
+.note-link { display: inline-block; margin-top: 8px; font-weight: 600; }
+
+/* ---------- кнопка «наверх» ---------- */
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 38;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--bg2);
+  border-radius: 50%;
+  background: var(--bg-soft);
+  color: var(--fg1);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s, background-color .12s ease, color .12s ease;
+}
+.to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--orange-b); color: #2b2118; }
 
 /* ---------- cta ---------- */
 
@@ -810,6 +864,35 @@ a:hover { color: var(--yellow-dim, #b57614); }
   font-size: .8rem;
 }
 
+.made-by {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  justify-content: flex-end;
+}
+
+.made-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px 5px 10px;
+  border: 1px solid var(--bg2);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--fg1);
+  font-weight: 700;
+  letter-spacing: .01em;
+  box-shadow: var(--shadow-sm);
+}
+
+.made-mark { color: var(--orange); flex: 0 0 auto; }
+
+.made-hint {
+  color: var(--fg3);
+  font-size: .76rem;
+}
+
 /* ---------- language blocks & reveal ---------- */
 
 html[lang="ru"] [data-lang-block="en"] { display: none; }
@@ -846,6 +929,9 @@ html[lang="en"] [data-lang-block="ru"] { display: none; }
   .cta-box { padding: 40px 22px; }
   .hero-facts { gap: 6px; }
   .gallery { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px 14px; }
+  .gh-ribbon { top: 20px; right: -40px; width: 170px; padding: 6px 0; font-size: .74rem; }
+  .to-top { right: 14px; bottom: 14px; width: 40px; height: 40px; }
+  .made-by { justify-content: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
