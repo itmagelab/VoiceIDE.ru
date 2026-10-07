@@ -127,8 +127,7 @@ const I18N = {
     'footer.col1': 'Разделы',
     'footer.col2': 'Проект',
     'footer.repo': 'Репозиторий',
-    'footer.made': 'Сделано с помощью VoiceIDE',
-    'footer.madeHint': 'диктовка задачи → план → правки → pull request'
+    'footer.made': 'Сделано с помощью VoiceIDE'
   },
 
   en: {
@@ -267,8 +266,7 @@ const I18N = {
     'footer.col1': 'Sections',
     'footer.col2': 'Project',
     'footer.repo': 'Repository',
-    'footer.made': 'Built with VoiceIDE',
-    'footer.madeHint': 'dictate the task → plan → edits → pull request'
+    'footer.made': 'Built with VoiceIDE'
   }
 };
 
