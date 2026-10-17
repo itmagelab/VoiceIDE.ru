@@ -1,6 +1,6 @@
 # Сайт VoiceIDE
 
-> 🌐 **Основной сайт приложения:** [vi.0ae.ru](https://vi.0ae.ru/)
+> 🌐 **Основной сайт приложения:** [voiceide.ru](https://voiceide.ru/)
 
 Статическая визитка проекта для GitHub Pages. Без сборки и зависимостей: чистые
 HTML, CSS и JavaScript, все тексты переключаются между RU и EN прямо в браузере.
@@ -41,10 +41,10 @@ Pages для приватного репозитория доступны тол
 
 ### Свой домен
 
-Когда будет готов DNS для `voiceide.ru`, добавьте файл `VoiceIDE.ru/CNAME` с
-одной строкой `voiceide.ru` и в `Settings → Pages` укажите домен. Для apex
-нужны A/AAAA-записи на IP GitHub Pages, для `www` — CNAME на
-`itmagelab.github.io`.
+Файл `CNAME` публикует основной домен `voiceide.ru`. В DNS настройте записи
+GitHub Pages для apex-домена и включите HTTPS в `Settings → Pages`. Для
+перенаправления `www.voiceide.ru` настройте DNS и редирект на стороне DNS-
+провайдера или хостинга.
 
 ## Правка текстов
 
