@@ -1,4 +1,10 @@
+# VoiceIDE — https://voiceide.ru/
+# Все страницы и ресурсы сайта открыты для индексации.
 User-agent: *
 Allow: /
+
+# скриншоты приложения участвуют в поиске по картинкам
+User-agent: Googlebot-Image
+Allow: /assets/img/
 
 Sitemap: https://voiceide.ru/sitemap.xml

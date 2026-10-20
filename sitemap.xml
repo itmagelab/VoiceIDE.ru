@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Главная страница сайта. Обновляйте lastmod при изменении содержимого. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://voiceide.ru/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/og-image.png</image:loc>
+      <image:title>VoiceIDE — разработка голосом с телефона</image:title>
+      <image:caption>Обложка VoiceIDE: диктовка задачи, план изменений, проверка кода и созданный pull request.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/01-projects-tasks.png</image:loc>
+      <image:title>Список проектов и задач VoiceIDE</image:title>
+      <image:caption>Проекты и задачи в мобильном приложении VoiceIDE.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/07-dictation.png</image:loc>
+      <image:title>Диктовка задачи голосом</image:title>
+      <image:caption>Диктовка новой задачи голосом и выбор языка распознавания.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/12-plan-review.png</image:loc>
+      <image:title>План изменений до написания кода</image:title>
+      <image:caption>Пошаговый план изменений, который предлагает ИИ-агент.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/02-task-running.png</image:loc>
+      <image:title>Выполнение задачи ИИ-агентом</image:title>
+      <image:caption>Статус задачи и ход работы ИИ-агента в реальном времени.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/03-task-review.png</image:loc>
+      <image:title>Проверка изменений по файлам</image:title>
+      <image:caption>Проверка различий в коде по каждому файлу и принятие правок.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/05-task-pr.png</image:loc>
+      <image:title>Созданный pull request</image:title>
+      <image:caption>Проверка названия и описания pull request перед отправкой.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/08-dialog-voice.png</image:loc>
+      <image:title>Обсуждение задачи голосом</image:title>
+      <image:caption>Голосовой запрос на доработку внутри той же сессии.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://voiceide.ru/assets/img/10-offline-speech-models.png</image:loc>
+      <image:title>Офлайн-модели распознавания речи</image:title>
+      <image:caption>Настройки голосового ввода и офлайн-моделей на устройстве.</image:caption>
+    </image:image>
   </url>
 </urlset>

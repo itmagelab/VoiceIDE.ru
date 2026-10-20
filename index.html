@@ -5,26 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VoiceIDE — разработка голосом с телефона</title>
 <meta name="description" content="VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.">
+<meta name="keywords" content="VoiceIDE, разработка голосом, голосовое программирование, ИИ-агент, мобильная IDE, Android, pull request, диктовка кода, офлайн-распознавание речи">
+<meta name="author" content="VoiceIDE">
+<meta name="application-name" content="VoiceIDE">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://voiceide.ru/">
 <meta name="theme-color" content="#fbf1c7">
+<link rel="icon" href="assets/img/icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="assets/img/icon-512.png">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="VoiceIDE">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://voiceide.ru/">
 <meta property="og:title" content="VoiceIDE — разработка голосом с телефона">
 <meta property="og:description" content="VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.">
 <meta property="og:image" content="https://voiceide.ru/assets/img/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" data-i18n-content="og.image.alt" content="VoiceIDE: диктовка задачи, план изменений, проверка кода и созданный pull request на экране смартфона">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VoiceIDE — разработка голосом с телефона">
+<meta name="twitter:description" content="VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.">
+<meta name="twitter:image" content="https://voiceide.ru/assets/img/og-image.png">
+<meta name="twitter:image:alt" data-i18n-content="og.image.alt" content="VoiceIDE: диктовка задачи, план изменений, проверка кода и созданный pull request на экране смартфона">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "VoiceIDE",
-  "url": "https://voiceide.ru/",
-  "description": "VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.",
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Android 8.0 и новее"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://voiceide.ru/#website",
+      "url": "https://voiceide.ru/",
+      "name": "VoiceIDE",
+      "description": "VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.",
+      "inLanguage": ["ru", "en"],
+      "publisher": { "@id": "https://voiceide.ru/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://voiceide.ru/#organization",
+      "name": "VoiceIDE",
+      "url": "https://voiceide.ru/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://voiceide.ru/assets/img/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": ["https://github.com/itmagelab/VoiceIDE"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://voiceide.ru/#webpage",
+      "url": "https://voiceide.ru/",
+      "name": "VoiceIDE — разработка голосом с телефона",
+      "description": "VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.",
+      "inLanguage": "ru",
+      "isPartOf": { "@id": "https://voiceide.ru/#website" },
+      "about": { "@id": "https://voiceide.ru/#app" },
+      "primaryImageOfPage": { "@id": "https://voiceide.ru/#primaryimage" }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://voiceide.ru/#primaryimage",
+      "url": "https://voiceide.ru/assets/img/og-image.png",
+      "width": 1200,
+      "height": 630,
+      "caption": "Экраны приложения VoiceIDE: диктовка задачи, план изменений, проверка кода и pull request"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://voiceide.ru/#app",
+      "name": "VoiceIDE",
+      "url": "https://voiceide.ru/",
+      "description": "VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Мобильная среда разработки",
+      "operatingSystem": "Android 8.0 и новее",
+      "softwareVersion": "0.9.1",
+      "inLanguage": ["ru", "en"],
+      "image": "https://voiceide.ru/assets/img/icon-512.png",
+      "screenshot": [
+        "https://voiceide.ru/assets/img/01-projects-tasks.png",
+        "https://voiceide.ru/assets/img/07-dictation.png",
+        "https://voiceide.ru/assets/img/12-plan-review.png",
+        "https://voiceide.ru/assets/img/03-task-review.png",
+        "https://voiceide.ru/assets/img/05-task-pr.png"
+      ],
+      "featureList": [
+        "Диктовка задач голосом",
+        "Офлайн-распознавание речи на устройстве",
+        "Обсуждение плана изменений с ИИ-агентом",
+        "Выбор ИИ-модели для задачи",
+        "Проверка изменений по файлам",
+        "Создание ветки и pull request в GitHub"
+      ],
+      "downloadUrl": "https://github.com/itmagelab/VoiceIDE/releases/latest",
+      "author": { "@id": "https://voiceide.ru/#organization" },
+      "publisher": { "@id": "https://voiceide.ru/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "RUB",
+        "availability": "https://schema.org/PreOrder"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://voiceide.ru/#faq",
+      "inLanguage": "ru",
+      "isPartOf": { "@id": "https://voiceide.ru/#webpage" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько стоит VoiceIDE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Приложение бесплатное: доступ к закрытому тестированию выдаётся по запросу автора. Если вы запускаете собственный сервер, понадобится ключ к выбранному ИИ-провайдеру и аккаунт GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие телефоны поддерживаются?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Android 8.0 или новее с микрофоном и современным процессором (ARM64). Большинство современных смартфонов подходят без ограничений."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли диктовать задачи без интернета?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Голосовая модель скачивается на телефон один раз, дальше распознавание речи идёт офлайн, и аудио никуда не отправляется. Интернет нужен только для работы ИИ-агента и GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Может ли ИИ-агент изменить код без моего ведома?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Агент работает в изолированном окружении, а коммит, ветка и pull request создаются только после вашего подтверждения в приложении."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что нужно, чтобы развернуть свой сервер?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Свой домен, открытые порты и Docker или Podman. Установка занимает одну команду, а безопасное HTTPS-соединение для внешних подключений настраивается автоматически."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как получить доступ к приложению?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Напишите автору через репозиторий проекта на GitHub — вам пришлют ссылку на сборку и помогут подключить первый репозиторий."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
-<link rel="icon" href="assets/img/icon-512.png" type="image/png">
 <link rel="stylesheet" href="assets/style.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -53,6 +199,7 @@
       <a href="#features" data-i18n="nav.features">Возможности</a>
       <a href="#screens" data-i18n="nav.screens">Скриншоты</a>
       <a href="#install" data-i18n="nav.install">Запуск</a>
+      <a href="#faq" data-i18n="nav.faq">Вопросы</a>
     </nav>
 
     <div class="header-actions">
@@ -91,17 +238,17 @@
       <div class="hero-visual">
         <div class="phone phone-main">
           <div class="phone-screen">
-            <img src="assets/img/01-projects-tasks.png" width="880" height="1920" data-i18n-alt="alt.projects" alt="Список проектов и задач">
+            <img src="assets/img/01-projects-tasks.png" width="880" height="1920" fetchpriority="high" decoding="async" data-i18n-alt="alt.projects" alt="Список проектов и задач">
           </div>
         </div>
         <div class="phone phone-back phone-back-left">
           <div class="phone-screen">
-            <img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.plan" alt="План изменений до написания кода">
+            <img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.plan" alt="План изменений до написания кода">
           </div>
         </div>
         <div class="phone phone-back phone-back-right">
           <div class="phone-screen">
-            <img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.review" alt="Проверка изменений по файлам">
+            <img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.review" alt="Проверка изменений по файлам">
           </div>
         </div>
       </div>
@@ -261,35 +408,35 @@
 
       <div class="gallery">
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/07-dictation.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.dictation" alt="Диктовка новой задачи"></div>
+          <div class="shot-frame"><img src="assets/img/07-dictation.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.dictation" alt="Диктовка новой задачи"></div>
           <figcaption data-i18n="screens.1.text">Диктовка задачи и выбор языка распознавания.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.plan" alt="План изменений до написания кода"></div>
+          <div class="shot-frame"><img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.plan" alt="План изменений до написания кода"></div>
           <figcaption data-i18n="screens.2.text">Пошаговый план изменений до внесения правок в код.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/02-task-running.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.running" alt="Задача выполняется"></div>
+          <div class="shot-frame"><img src="assets/img/02-task-running.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.running" alt="Задача выполняется"></div>
           <figcaption data-i18n="screens.3.text">Статус выполнения задачи и ход работы в реальном времени.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.review" alt="Проверка изменений по файлам"></div>
+          <div class="shot-frame"><img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.review" alt="Проверка изменений по файлам"></div>
           <figcaption data-i18n="screens.4.text">Удобный просмотр изменений по файлам и принятие решений.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/08-dialog-voice.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.dialog" alt="Обсуждение задачи"></div>
+          <div class="shot-frame"><img src="assets/img/08-dialog-voice.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.dialog" alt="Обсуждение задачи"></div>
           <figcaption data-i18n="screens.5.text">Голосовой запрос на доработку в той же сессии.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/05-task-pr.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.pr" alt="Созданный pull request"></div>
+          <div class="shot-frame"><img src="assets/img/05-task-pr.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.pr" alt="Созданный pull request"></div>
           <figcaption data-i18n="screens.6.text">Проверка описания и названия pull request перед отправкой.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/10-offline-speech-models.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.models" alt="Настройки голосового ввода"></div>
+          <div class="shot-frame"><img src="assets/img/10-offline-speech-models.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.models" alt="Настройки голосового ввода"></div>
           <figcaption data-i18n="screens.7.text">Настройки голосового ввода на устройстве.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/01-projects-tasks.png" width="880" height="1920" loading="lazy" data-i18n-alt="alt.projects" alt="Список проектов и задач"></div>
+          <div class="shot-frame"><img src="assets/img/01-projects-tasks.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.projects" alt="Список проектов и задач"></div>
           <figcaption data-i18n="screens.8.text">Список проектов и задач — всё под рукой.</figcaption>
         </figure>
       </div>
@@ -378,6 +525,43 @@ podman compose up --detach</pre>
     </div>
   </section>
 
+  <section class="section" id="faq">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="faq.kicker">Частые вопросы</p>
+        <h2 data-i18n="faq.title">Частые вопросы и ответы</h2>
+        <p class="section-lead" data-i18n="faq.lead">Коротко о стоимости, поддерживаемых устройствах и приватности.</p>
+      </header>
+
+      <div class="cards cards-3">
+        <article class="card" data-reveal>
+          <h3 data-i18n="faq.1.q">Сколько стоит VoiceIDE?</h3>
+          <p data-i18n="faq.1.a">Приложение бесплатное: доступ к закрытому тестированию выдаётся по запросу автора. Если вы запускаете собственный сервер, понадобится ключ к выбранному ИИ-провайдеру и аккаунт GitHub.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="faq.2.q">Какие телефоны поддерживаются?</h3>
+          <p data-i18n="faq.2.a">Android 8.0 или новее с микрофоном и современным процессором (ARM64). Большинство современных смартфонов подходят без ограничений.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="faq.3.q">Можно ли диктовать задачи без интернета?</h3>
+          <p data-i18n="faq.3.a">Да. Голосовая модель скачивается на телефон один раз, дальше распознавание речи идёт офлайн, и аудио никуда не отправляется. Интернет нужен только для работы ИИ-агента и GitHub.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="faq.4.q">Может ли ИИ-агент изменить код без моего ведома?</h3>
+          <p data-i18n="faq.4.a">Нет. Агент работает в изолированном окружении, а коммит, ветка и pull request создаются только после вашего подтверждения в приложении.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="faq.5.q">Что нужно, чтобы развернуть свой сервер?</h3>
+          <p data-i18n="faq.5.a">Свой домен, открытые порты и Docker или Podman. Установка занимает одну команду, а безопасное HTTPS-соединение для внешних подключений настраивается автоматически.</p>
+        </article>
+        <article class="card" data-reveal>
+          <h3 data-i18n="faq.6.q">Как получить доступ к приложению?</h3>
+          <p data-i18n="faq.6.a">Напишите автору через репозиторий проекта на GitHub — вам пришлют ссылку на сборку и помогут подключить первый репозиторий.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="section cta-section" id="cta">
     <div class="container">
       <div class="cta-box" data-reveal>
@@ -412,6 +596,7 @@ podman compose up --detach</pre>
       <a href="#features" data-i18n="nav.features">Возможности</a>
       <a href="#screens" data-i18n="nav.screens">Скриншоты</a>
       <a href="#install" data-i18n="nav.install">Запуск</a>
+      <a href="#faq" data-i18n="nav.faq">Вопросы</a>
     </nav>
     <nav class="footer-col" data-i18n-attr="aria-label:a11y.project" aria-label="Проект">
       <h2 class="footer-head" data-i18n="footer.col2">Проект</h2>

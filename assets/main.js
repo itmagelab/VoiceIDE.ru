@@ -19,6 +19,7 @@ const I18N = {
     'nav.features': 'Возможности',
     'nav.screens': 'Скриншоты',
     'nav.install': 'Запуск',
+    'nav.faq': 'Вопросы',
     'cta.get': 'Как подключить',
     'hero.badge': 'Задача → План → Правки → Pull Request',
     'hero.title.a': 'Пишите код голосом',
@@ -117,6 +118,22 @@ const I18N = {
     'privacy.5.text': 'Действия ИИ-агента ограничены только безопасными командами. Проект защищен от вредоносного кода.',
     'privacy.6.title': 'Ваш аккаунт',
     'privacy.6.text': 'Все коммиты, ветки и pull request создаются строго под вашей учетной записью GitHub и только в выбранном проекте.',
+    'faq.kicker': 'Частые вопросы',
+    'faq.title': 'Частые вопросы и ответы',
+    'faq.lead': 'Коротко о стоимости, поддерживаемых устройствах и приватности.',
+    'faq.1.q': 'Сколько стоит VoiceIDE?',
+    'faq.1.a': 'Приложение бесплатное: доступ к закрытому тестированию выдаётся по запросу автора. Если вы запускаете собственный сервер, понадобится ключ к выбранному ИИ-провайдеру и аккаунт GitHub.',
+    'faq.2.q': 'Какие телефоны поддерживаются?',
+    'faq.2.a': 'Android 8.0 или новее с микрофоном и современным процессором (ARM64). Большинство современных смартфонов подходят без ограничений.',
+    'faq.3.q': 'Можно ли диктовать задачи без интернета?',
+    'faq.3.a': 'Да. Голосовая модель скачивается на телефон один раз, дальше распознавание речи идёт офлайн, и аудио никуда не отправляется. Интернет нужен только для работы ИИ-агента и GitHub.',
+    'faq.4.q': 'Может ли ИИ-агент изменить код без моего ведома?',
+    'faq.4.a': 'Нет. Агент работает в изолированном окружении, а коммит, ветка и pull request создаются только после вашего подтверждения в приложении.',
+    'faq.5.q': 'Что нужно, чтобы развернуть свой сервер?',
+    'faq.5.a': 'Свой домен, открытые порты и Docker или Podman. Установка занимает одну команду, а безопасное HTTPS-соединение для внешних подключений настраивается автоматически.',
+    'faq.6.q': 'Как получить доступ к приложению?',
+    'faq.6.a': 'Напишите автору через репозиторий проекта на GitHub — вам пришлют ссылку на сборку и помогут подключить первый репозиторий.',
+    'og.image.alt': 'VoiceIDE: диктовка задачи, план изменений, проверка кода и созданный pull request на экране смартфона',
     'cta.title': 'Опишите задачу голосом — код напишет ИИ',
     'cta.text': 'Подключите VoiceIDE к своему проекту и пишите код на ходу. План, генерация, проверка и создание PR — в едином удобном интерфейсе.',
     'cta.primary': 'Как подключить',
@@ -149,6 +166,7 @@ const I18N = {
     'nav.features': 'Features',
     'nav.screens': 'Screens',
     'nav.install': 'Get started',
+    'nav.faq': 'FAQ',
     'cta.get': 'Get started',
 
     'hero.badge': 'Task → Plan → Changes → Pull Request',
@@ -255,6 +273,22 @@ const I18N = {
     'privacy.6.title': 'Your account',
     'privacy.6.text': 'All commits, branches, and pull requests are created strictly under your GitHub account and only in the chosen project.',
 
+    'faq.kicker': 'FAQ',
+    'faq.title': 'Frequently asked questions',
+    'faq.lead': 'The short answers about pricing, supported devices, and privacy.',
+    'faq.1.q': 'How much does VoiceIDE cost?',
+    'faq.1.a': 'The app is free: access to the closed beta is granted on request. If you run your own server, you only need a key for the AI provider you choose and a GitHub account.',
+    'faq.2.q': 'Which phones are supported?',
+    'faq.2.a': 'Android 8.0 or newer with a microphone and a modern ARM64 processor. Most current smartphones work without any limits.',
+    'faq.3.q': 'Can I dictate tasks without the internet?',
+    'faq.3.a': 'Yes. The speech model is downloaded to the phone once, and after that recognition runs offline, so audio is never uploaded. The internet is only needed for the AI agent and GitHub.',
+    'faq.4.q': 'Can the AI agent change my code without asking?',
+    'faq.4.a': 'No. The agent works in an isolated environment, and commits, branches, and pull requests are created only after you confirm them in the app.',
+    'faq.5.q': 'What do I need to run my own server?',
+    'faq.5.a': 'Your own domain, open ports, and Docker or Podman. Installation is a single command, and a secure HTTPS connection for external access is set up automatically.',
+    'faq.6.q': 'How do I get access to the app?',
+    'faq.6.a': 'Write to the author through the project repository on GitHub — you will get a download link and help connecting your first repository.',
+    'og.image.alt': 'VoiceIDE: dictating a task, reviewing the change plan, checking the code, and a created pull request on a phone screen',
     'cta.title': 'Describe the task by voice — the AI writes the code',
     'cta.text': 'Connect VoiceIDE to your project and write code on the go. Plan, generate, review, and create a PR in one convenient interface.',
     'cta.primary': 'Get started',
@@ -308,12 +342,28 @@ function applyLang(lang) {
     });
   });
 
+  /* content-атрибуты метатегов (og:image:alt, twitter:image:alt) */
+  document.querySelectorAll('[data-i18n-content]').forEach((el) => {
+    const value = dict[el.dataset.i18nContent];
+    if (value !== undefined) el.setAttribute('content', value);
+  });
+
+  /* заголовок и описания: вкладка браузера, поиск, соцсети */
   document.title = dict['doc.title'];
-  document.querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"]')
-    .forEach((meta) => {
-      const value = meta.getAttribute('property') === 'og:title' ? dict['doc.title'] : dict['doc.description'];
-      if (value) meta.setAttribute('content', value);
-    });
+
+  const metaMap = [
+    ['meta[name="description"]', 'doc.description'],
+    ['meta[property="og:title"]', 'doc.title'],
+    ['meta[property="og:description"]', 'doc.description'],
+    ['meta[name="twitter:title"]', 'doc.title'],
+    ['meta[name="twitter:description"]', 'doc.description']
+  ];
+
+  metaMap.forEach(([selector, key]) => {
+    const value = dict[key];
+    if (value === undefined) return;
+    document.querySelectorAll(selector).forEach((meta) => meta.setAttribute('content', value));
+  });
 
   document.querySelectorAll('[data-lang-set]').forEach((btn) => {
     btn.setAttribute('aria-pressed', String(btn.dataset.langSet === lang));
