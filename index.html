@@ -24,12 +24,12 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" data-i18n-content="og.image.alt" content="VoiceIDE: диктовка задачи, план изменений, проверка кода и созданный pull request на экране смартфона">
+<meta property="og:image:alt" data-i18n-content="og.image.alt" content="VoiceIDE: список задач, новая задача голосом, проверка кода и созданный pull request на экране смартфона">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VoiceIDE — разработка голосом с телефона">
 <meta name="twitter:description" content="VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.">
 <meta name="twitter:image" content="https://voiceide.ru/assets/img/og-image.png">
-<meta name="twitter:image:alt" data-i18n-content="og.image.alt" content="VoiceIDE: диктовка задачи, план изменений, проверка кода и созданный pull request на экране смартфона">
+<meta name="twitter:image:alt" data-i18n-content="og.image.alt" content="VoiceIDE: список задач, новая задача голосом, проверка кода и созданный pull request на экране смартфона">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,7 +73,7 @@
       "url": "https://voiceide.ru/assets/img/og-image.png",
       "width": 1200,
       "height": 630,
-      "caption": "Экраны приложения VoiceIDE: диктовка задачи, план изменений, проверка кода и pull request"
+      "caption": "Экраны приложения VoiceIDE: список задач, новая задача голосом, проверка кода и pull request"
     },
     {
       "@type": "SoftwareApplication",
@@ -88,11 +88,11 @@
       "inLanguage": ["ru", "en"],
       "image": "https://voiceide.ru/assets/img/icon-512.png",
       "screenshot": [
-        "https://voiceide.ru/assets/img/01-projects-tasks.png",
-        "https://voiceide.ru/assets/img/07-dictation.png",
-        "https://voiceide.ru/assets/img/12-plan-review.png",
-        "https://voiceide.ru/assets/img/03-task-review.png",
-        "https://voiceide.ru/assets/img/05-task-pr.png"
+        "https://voiceide.ru/assets/img/01-tasks.png",
+        "https://voiceide.ru/assets/img/02-new-task.png",
+        "https://voiceide.ru/assets/img/04-agent-working.png",
+        "https://voiceide.ru/assets/img/05-review-diff.png",
+        "https://voiceide.ru/assets/img/06-pull-request.png"
       ],
       "featureList": [
         "Диктовка задач голосом",
@@ -238,17 +238,17 @@
       <div class="hero-visual">
         <div class="phone phone-main">
           <div class="phone-screen">
-            <img src="assets/img/01-projects-tasks.png" width="880" height="1920" fetchpriority="high" decoding="async" data-i18n-alt="alt.projects" alt="Список проектов и задач">
+            <img src="assets/img/01-tasks.png" width="1080" height="2424" fetchpriority="high" decoding="async" data-i18n-alt="alt.tasks" alt="Список задач">
           </div>
         </div>
         <div class="phone phone-back phone-back-left">
           <div class="phone-screen">
-            <img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.plan" alt="План изменений до написания кода">
+            <img src="assets/img/05-review-diff.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.review" alt="Проверка изменений по файлам">
           </div>
         </div>
         <div class="phone phone-back phone-back-right">
           <div class="phone-screen">
-            <img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.review" alt="Проверка изменений по файлам">
+            <img src="assets/img/04-agent-working.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.running" alt="Агент работает над задачей">
           </div>
         </div>
       </div>
@@ -408,36 +408,28 @@
 
       <div class="gallery">
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/07-dictation.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.dictation" alt="Диктовка новой задачи"></div>
-          <figcaption data-i18n="screens.1.text">Диктовка задачи и выбор языка распознавания.</figcaption>
+          <div class="shot-frame"><img src="assets/img/01-tasks.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.tasks" alt="Список задач"></div>
+          <figcaption data-i18n="screens.1.text">Список задач: что ждёт вашего решения и что уже готово.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/12-plan-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.plan" alt="План изменений до написания кода"></div>
-          <figcaption data-i18n="screens.2.text">Пошаговый план изменений до внесения правок в код.</figcaption>
+          <div class="shot-frame"><img src="assets/img/02-new-task.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.newTask" alt="Новая задача: модель, ветка и режим"></div>
+          <figcaption data-i18n="screens.2.text">Описание задачи, выбор модели, ветки и режима работы агента.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/02-task-running.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.running" alt="Задача выполняется"></div>
-          <figcaption data-i18n="screens.3.text">Статус выполнения задачи и ход работы в реальном времени.</figcaption>
+          <div class="shot-frame"><img src="assets/img/03-dictation.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.dictation" alt="Диктовка новой задачи"></div>
+          <figcaption data-i18n="screens.3.text">Диктовка задачи голосом с выбором языка распознавания.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/03-task-review.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.review" alt="Проверка изменений по файлам"></div>
-          <figcaption data-i18n="screens.4.text">Удобный просмотр изменений по файлам и принятие решений.</figcaption>
+          <div class="shot-frame"><img src="assets/img/04-agent-working.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.running" alt="Агент работает над задачей"></div>
+          <figcaption data-i18n="screens.4.text">Статус выполнения задачи и журнал работы агента в реальном времени.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/08-dialog-voice.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.dialog" alt="Обсуждение задачи"></div>
-          <figcaption data-i18n="screens.5.text">Голосовой запрос на доработку в той же сессии.</figcaption>
+          <div class="shot-frame"><img src="assets/img/05-review-diff.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.review" alt="Проверка изменений по файлам"></div>
+          <figcaption data-i18n="screens.5.text">Удобный просмотр изменений по файлам и принятие решений.</figcaption>
         </figure>
         <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/05-task-pr.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.pr" alt="Созданный pull request"></div>
-          <figcaption data-i18n="screens.6.text">Проверка описания и названия pull request перед отправкой.</figcaption>
-        </figure>
-        <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/10-offline-speech-models.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.models" alt="Настройки голосового ввода"></div>
-          <figcaption data-i18n="screens.7.text">Настройки голосового ввода на устройстве.</figcaption>
-        </figure>
-        <figure class="shot" data-reveal>
-          <div class="shot-frame"><img src="assets/img/01-projects-tasks.png" width="880" height="1920" loading="lazy" decoding="async" data-i18n-alt="alt.projects" alt="Список проектов и задач"></div>
-          <figcaption data-i18n="screens.8.text">Список проектов и задач — всё под рукой.</figcaption>
+          <div class="shot-frame"><img src="assets/img/06-pull-request.png" width="1080" height="2424" loading="lazy" decoding="async" data-i18n-alt="alt.pr" alt="Созданный pull request"></div>
+          <figcaption data-i18n="screens.6.text">Готовый pull request и возможность добавить в него изменения.</figcaption>
         </figure>
       </div>
     </div>

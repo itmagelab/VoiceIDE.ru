@@ -628,7 +628,7 @@ a:hover { color: var(--yellow-dim, #b57614); }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 26px 22px;
 }
 
@@ -912,6 +912,7 @@ html[lang="en"] [data-lang-block="ru"] { display: none; }
   .phone-back { display: none; }
   .how-grid { grid-template-columns: 1fr; }
   .terminal-wrap { position: static; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
