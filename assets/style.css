@@ -624,6 +624,53 @@ a:hover { color: var(--yellow-dim, #b57614); }
 .card-yellow { background: var(--yellow-b); }
 .card-green { background: var(--green-b); }
 
+/* ---------- contacts ---------- */
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.contact-card {
+  padding: 22px;
+  background: var(--bg-hard);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--bg3);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: .76rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--fg3);
+}
+
+.contact-value {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--fg);
+  word-break: break-word;
+  text-decoration: none;
+}
+p.contact-value { margin: 0; }
+
+a.contact-value { border-bottom: 2px solid var(--orange-b); }
+a.contact-value:hover { color: var(--orange); border-bottom-color: transparent; }
+
+.contact-hint { color: var(--fg2); font-size: .9rem; }
+
 /* ---------- gallery ---------- */
 
 .gallery {

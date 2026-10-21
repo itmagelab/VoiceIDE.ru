@@ -54,7 +54,18 @@
         "width": 512,
         "height": 512
       },
-      "sameAs": ["https://github.com/itmagelab/VoiceIDE"]
+      "sameAs": ["https://github.com/itmagelab/VoiceIDE", "https://t.me/iTmagelab"],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "@id": "https://voiceide.ru/#contacts",
+          "contactType": "customer support",
+          "email": "i@itmage.ru",
+          "telephone": "+7987777345",
+          "url": "https://voiceide.ru/#contacts",
+          "availableLanguage": ["ru", "en"]
+        }
+      ]
     },
     {
       "@type": "WebPage",
@@ -163,7 +174,7 @@
           "name": "Как получить доступ к приложению?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Напишите автору через репозиторий проекта на GitHub — вам пришлют ссылку на сборку и помогут подключить первый репозиторий."
+            "text": "Напишите автору удобным способом — все контакты собраны в разделе «Контакты». Вам пришлют ссылку на сборку и помогут подключить первый репозиторий."
           }
         }
       ]
@@ -200,6 +211,7 @@
       <a href="#screens" data-i18n="nav.screens">Скриншоты</a>
       <a href="#install" data-i18n="nav.install">Запуск</a>
       <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
     </nav>
 
     <div class="header-actions">
@@ -447,7 +459,7 @@
         <article class="panel" data-reveal>
           <h3 class="panel-title" data-i18n="install.a.title">Публичный демо-сервер</h3>
           <p data-i18n="install.a.text">Идеально для быстрого знакомства. Оцените возможности приложения мгновенно, без настройки серверов.</p>
-          <a class="btn btn-primary" href="#cta" data-i18n="install.a.cta">Написать автору</a>
+          <a class="btn btn-primary" href="#contacts" data-i18n="install.a.cta">Написать автору</a>
         </article>
 
         <article class="panel panel-dark" data-reveal>
@@ -548,7 +560,37 @@ podman compose up --detach</pre>
         </article>
         <article class="card" data-reveal>
           <h3 data-i18n="faq.6.q">Как получить доступ к приложению?</h3>
-          <p data-i18n="faq.6.a">Напишите автору через репозиторий проекта на GitHub — вам пришлют ссылку на сборку и помогут подключить первый репозиторий.</p>
+          <p data-i18n="faq.6.a">Напишите автору удобным способом — все контакты собраны в разделе «Контакты». Вам пришлют ссылку на сборку и помогут подключить первый репозиторий.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="contacts">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-kicker" data-i18n="contacts.kicker">Связь</p>
+        <h2 data-i18n="contacts.title">Контакты</h2>
+        <p class="section-lead" data-i18n="contacts.lead">Вопросы по доступу к тестированию, установке сервера и поддержке — пишите напрямую: в Телеграм, на почту или позвоните.</p>
+      </header>
+
+      <div class="contacts-grid">
+        <article class="contact-card" data-reveal>
+          <span class="contact-label" data-i18n="contacts.tg.label">Телеграм</span>
+          <a class="contact-value" href="https://t.me/iTmagelab" data-i18n="contacts.tg.value">@iTmagelab</a>
+          <p class="contact-hint" data-i18n="contacts.tg.hint">Самый быстрый способ связи — напишите в Телеграм.</p>
+        </article>
+
+        <article class="contact-card" data-reveal>
+          <span class="contact-label" data-i18n="contacts.email.label">Почта</span>
+          <a class="contact-value" href="mailto:i@itmage.ru" data-i18n="contacts.email.value">i@itmage.ru</a>
+          <p class="contact-hint" data-i18n="contacts.email.hint">Для подробных писем, счетов и документов.</p>
+        </article>
+
+        <article class="contact-card" data-reveal>
+          <span class="contact-label" data-i18n="contacts.phone.label">Телефон</span>
+          <a class="contact-value" href="tel:+7987777345" data-i18n="contacts.phone.value">+7 987 777-34-5</a>
+          <p class="contact-hint" data-i18n="contacts.phone.hint">Звонок или сообщение по этому номеру.</p>
         </article>
       </div>
     </div>
@@ -589,6 +631,7 @@ podman compose up --detach</pre>
       <a href="#screens" data-i18n="nav.screens">Скриншоты</a>
       <a href="#install" data-i18n="nav.install">Запуск</a>
       <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
     </nav>
     <nav class="footer-col" data-i18n-attr="aria-label:a11y.project" aria-label="Проект">
       <h2 class="footer-head" data-i18n="footer.col2">Проект</h2>
