@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- HTTPS: страница не должна тянуть ресурсы по http, иначе браузер ругается на смешанный контент; директива подстрахует, если http-ссылка появится позже -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>VoiceIDE — разработка голосом с телефона</title>
 <meta name="description" content="VoiceIDE — мобильное приложение для разработки: описывайте задачи голосом, получайте готовый план, проверяйте изменения и создавайте pull request.">
 <meta name="keywords" content="VoiceIDE, разработка голосом, голосовое программирование, ИИ-агент, мобильная IDE, Android, pull request, диктовка кода, офлайн-распознавание речи">
