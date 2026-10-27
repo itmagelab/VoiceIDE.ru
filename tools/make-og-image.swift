@@ -5,7 +5,7 @@
 //
 // Макет повторяет первый экран сайта: слева текст, справа три телефона
 // со скриншотами приложения. Картинки берутся из assets/img — это копии
-// docs/release-assets/ из основного репозитория VoiceIDE.
+// contrib/release-assets/ из основного репозитория VoiceIDE.
 
 import AppKit
 import CoreGraphics
@@ -248,7 +248,7 @@ let imageDir = CommandLine.arguments.count > 1 ? CommandLine.arguments[1] : "ass
 guard
     let tasksShot = loadImage("\(imageDir)/01-tasks.png"),
     let newTaskShot = loadImage("\(imageDir)/02-new-task.png"),
-    let reviewShot = loadImage("\(imageDir)/05-review-diff.png")
+    let reviewShot = loadImage("\(imageDir)/04-review-diff.png")
 else {
     fatalError("cannot load screenshots from \(imageDir)")
 }

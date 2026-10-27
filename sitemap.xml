@@ -4,13 +4,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://voiceide.ru/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://voiceide.ru/assets/img/og-image.png</image:loc>
       <image:title>VoiceIDE — разработка голосом с телефона</image:title>
-      <image:caption>Обложка VoiceIDE: список задач, диктовка, проверка кода и созданный pull request.</image:caption>
+      <image:caption>Обложка VoiceIDE: список задач, новая задача, чат с агентом, проверка кода и созданный pull request.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://voiceide.ru/assets/img/01-tasks.png</image:loc>
@@ -20,27 +20,22 @@
     <image:image>
       <image:loc>https://voiceide.ru/assets/img/02-new-task.png</image:loc>
       <image:title>Новая задача в VoiceIDE</image:title>
-      <image:caption>Описание задачи, выбор модели, ветки и режима работы агента.</image:caption>
+      <image:caption>Описание задачи, выбор проекта, модели и режима работы.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://voiceide.ru/assets/img/03-dictation.png</image:loc>
-      <image:title>Диктовка задачи голосом</image:title>
-      <image:caption>Диктовка новой задачи голосом и выбор языка распознавания.</image:caption>
+      <image:loc>https://voiceide.ru/assets/img/03-task-chat.png</image:loc>
+      <image:title>Чат задачи с ИИ-агентом</image:title>
+      <image:caption>Результат работы ИИ-агента в чате задачи и переход к проверке изменений.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://voiceide.ru/assets/img/04-agent-working.png</image:loc>
-      <image:title>Выполнение задачи ИИ-агентом</image:title>
-      <image:caption>Статус задачи и журнал работы ИИ-агента в реальном времени.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://voiceide.ru/assets/img/05-review-diff.png</image:loc>
+      <image:loc>https://voiceide.ru/assets/img/04-review-diff.png</image:loc>
       <image:title>Проверка изменений по файлам</image:title>
       <image:caption>Проверка различий в коде по каждому файлу и принятие правок.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://voiceide.ru/assets/img/06-pull-request.png</image:loc>
+      <image:loc>https://voiceide.ru/assets/img/05-pull-request.png</image:loc>
       <image:title>Созданный pull request</image:title>
-      <image:caption>Готовый pull request, который открыл агент, и возможность добавить в него изменения.</image:caption>
+      <image:caption>Готовый pull request, который открыл агент, и продолжение работы в том же чате.</image:caption>
     </image:image>
   </url>
 </urlset>

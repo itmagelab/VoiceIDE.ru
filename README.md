@@ -21,12 +21,12 @@ VoiceIDE.ru/
     └── make-og-image.swift # генератор превью og-image.png
 ```
 
-Скриншоты скопированы из `docs/release-assets/`, чтобы сайт собирался из одной
-папки: workflow публикует только `VoiceIDE.ru/`. Имена совпадают с исходными:
-`01-tasks`, `02-new-task`, `03-dictation`, `04-agent-working`, `05-review-diff`,
-`06-pull-request`. После обновления скриншотов в основном репозитории их нужно
-перекопировать сюда и поправить ссылки в `index.html`, `assets/main.js`
-(подписи `alt.*` и `screens.*.text`) и `sitemap.xml`.
+Скриншоты скопированы из `contrib/release-assets/` основного репозитория, чтобы
+сайт собирался из одной папки: workflow публикует только `VoiceIDE.ru/`. Имена
+совпадают с исходными: `01-tasks`, `02-new-task`, `03-task-chat`,
+`04-review-diff`, `05-pull-request`. После обновления скриншотов в основном
+репозитории их нужно перекопировать сюда и поправить ссылки в `index.html`,
+`assets/main.js` (подписи `alt.*` и `screens.*.text`) и `sitemap.xml`.
 
 ## Превью для соцсетей
 
