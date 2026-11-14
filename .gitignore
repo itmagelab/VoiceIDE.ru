@@ -5,3 +5,6 @@
 .idea/
 .vscode/
 *.swp
+
+# Служебные файлы OpenChamber (скриншоты предпросмотра)
+.openchamber/
